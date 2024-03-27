@@ -1,0 +1,76 @@
+---
+title: "Tabla de Productos y Precios"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<h2>Santiago Diez <br>
+Juan Rivero <br>
+Agustín Rodriguez <br>
+Tomás Boismene <br>
+Lucas Patiri <br></h2>
+<br><h3>Estamos creando una empresa donde necesitamos 4 computadoras con distintos costos, hacemos una grafica y una tabla que los muestre</h3>
+```{r costos, echo = FALSE}
+
+
+# Crear un data frame con los productos y precios
+productos <- data.frame(
+  Producto = c("PC1", "PC2", "PC3", "PC4"),
+  Precio = c(1000000, 800000, 1200000, 950000)
+)
+
+barplot(productos$Precio, names.arg = productos$Producto,
+        main = "Productos y Precios",
+        xlab = "Producto", ylab = "Precio",
+        col = "skyblue", border = "black")
+
+
+# Imprimir la tabla
+
+
+knitr::kable(productos, format = "html")
+```
+
+<br>
+<h2>Tutorial básico de R</h2>
+
+1. Asignación de variables
+Puedes asignar valores a variables utilizando el operador <- o =
+x <- 5
+y = 10
+
+2. Operaciones aritméticas
+suma <- 3 + 4
+resta <- 7 - 2
+multiplicacion <- 5 * 2
+division <- 10 / 2
+potenciacion <- 2^3
+
+3. Vectores
+Los vectores son una colección ordenada de elementos del mismo tipo.
+vector_numerico <- c(1, 2, 3, 4, 5)
+vector_caracter <- c("a", "b", "c", "d", "e")
+
+4. Funciones
+R tiene muchas funciones integradas que puedes usar para realizar tareas específicas.
+Por ejemplo, la función mean() calcula la media de un conjunto de números.
+numeros <- c(1, 2, 3, 4, 5)
+media <- mean(numeros)
+
+5. Data frames
+Los data frames son estructuras de datos bidimensionales que se usan para almacenar conjuntos de datos.
+Puedes crear data frames utilizando la función data.frame().
+edades <- c(25, 30, 35)
+nombres <- c("Juan", "María", "Pedro")
+df <- data.frame(Edad = edades, Nombre = nombres)
+
+6. Indexación de vectores y data frames
+Puedes acceder a elementos individuales de un vector o data frame utilizando corchetes [].
+primer_elemento <- vector_numerico[1]
+nombre_primera_fila <- df[1, "Nombre"]
+
+7. Gráficos
+R es conocido por su capacidad para generar gráficos de alta calidad.
+Puedes crear gráficos utilizando funciones como plot(), hist(), barplot(), entre otras.
