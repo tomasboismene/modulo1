@@ -3,9 +3,9 @@
 ### Integrantes del Grupo
 
 * Boismene Tomas <tboismene@outlook.com>
-* Cerutti Tomas
+* Cerutti Tomas <>
 * Rodriguez Agustin <airodriguezzulueta@gmail.com>
 * Diez Oñate Santiago <sdiezdeonate@gmail.com>
-* Patiri Lucas
-* Rivero Juan Manuel
+* Patiri Lucas <patiri.lucas02@gmail.com>
+* Rivero Juan Manuel <juanmarivero1@gmail.com> 
   
