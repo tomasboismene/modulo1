@@ -1,0 +1,102 @@
+---
+title: "Tabla de Productos y Precios"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r costos}
+# Santiago Diez
+# Juan Rivero
+# Agustín Rodriguez
+# Tomás Boismene
+# Lucas Patiri
+# Tomás Cerutti
+
+# Crear un data frame con los productos y precios
+productos <- data.frame(
+  Producto = c("PC1", "PC2", "PC3", "PC4"),
+  Precio = c(1000000, 800000, 1200000, 950000)
+)
+
+# Tutorial básico de R
+
+# 1. Asignación de variables
+# Puedes asignar valores a variables utilizando el operador <- o =
+x <- 5
+y = 10
+
+# 2. Operaciones aritméticas
+suma <- 3 + 4
+resta <- 7 - 2
+multiplicacion <- 5 * 2
+division <- 10 / 2
+potenciacion <- 2^3
+
+# 3. Vectores
+# Los vectores son una colección ordenada de elementos del mismo tipo.
+vector_numerico <- c(1, 2, 3, 4, 5)
+vector_caracter <- c("a", "b", "c", "d", "e")
+
+# 4. Funciones
+# R tiene muchas funciones integradas que puedes usar para realizar tareas específicas.
+# Por ejemplo, la función mean() calcula la media de un conjunto de números.
+numeros <- c(1, 2, 3, 4, 5)
+media <- mean(numeros)
+
+# 5. Data frames
+# Los data frames son estructuras de datos bidimensionales que se usan para almacenar conjuntos de datos.
+# Puedes crear data frames utilizando la función data.frame().
+edades <- c(25, 30, 35)
+nombres <- c("Juan", "María", "Pedro")
+df <- data.frame(Edad = edades, Nombre = nombres)
+
+# 6. Indexación de vectores y data frames
+# Puedes acceder a elementos individuales de un vector o data frame utilizando corchetes [].
+primer_elemento <- vector_numerico[1]
+nombre_primera_fila <- df[1, "Nombre"]
+
+# 7. Gráficos
+# R es conocido por su capacidad para generar gráficos de alta calidad.
+# Puedes crear gráficos utilizando funciones como plot(), hist(), barplot(), entre otras.
+
+# Ahora que hemos cubierto algunos conceptos básicos, ¡puedes empezar a explorar más sobre R!
+
+barplot(productos$Precio, names.arg = productos$Producto,
+        main = "Productos y Precios",
+        xlab = "Producto", ylab = "Precio",
+        col = "skyblue", border = "black")
+
+
+# Imprimir la tabla
+
+
+knitr::kable(productos, format = "html")
+# Definición de vectores
+mi_vector_a <- c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
+mi_vector_b <- seq(1:10000)
+
+# Creación de la matriz de 100x100 y visualización
+mi_matriz_c <- matrix(mi_vector_b[1:10000], nrow=100, ncol=100, byrow=TRUE) 
+print("Visualización de la matriz completa 100x100:")
+print(mi_matriz_c)
+
+# Leer toda la matriz excepto la fila 2
+print("Matriz 100x100 con la fila 2 excluida:")
+resultado_exclusion <- mi_matriz_c[-2, ]
+print(resultado_exclusion)
+
+# Medición del tiempo de ejecución para mostrar la matriz
+start_time <- Sys.time()
+print(mi_matriz_c)
+end_time <- Sys.time()
+tiempo_ejecucion <- end_time - start_time
+print(paste("Tiempo de ejecución para mostrar la matriz:", tiempo_ejecucion, "segundos"))
+
+
+
+```
+
+
